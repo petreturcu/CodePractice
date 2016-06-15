@@ -11,6 +11,9 @@ namespace Algorithms
         static void Main(string[] args)
         {
             Sets.PermuteSimple("123");
+
+            Console.WriteLine(Strings.CompareNoLib("abcd", "abcd"));
+            Console.WriteLine(Strings.CompareNoLib("abc", "abcd"));
         }
     }
 }
