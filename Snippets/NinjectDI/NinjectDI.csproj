@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ICaffeinated.cs" />
     <Compile Include="IEditor.cs" />
+    <Compile Include="NinjectFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Programmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
