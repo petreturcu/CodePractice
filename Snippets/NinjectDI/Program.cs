@@ -16,9 +16,13 @@ namespace NinjectDI
             CustomModule module = new CustomModule();
             IKernel kernel = new StandardKernel(module);
 
-            var programmer = kernel.Get<Programmer>();
+            var programmer = kernel.Get<MicrosoftProgrammer>();
+            Console.WriteLine(programmer.GetType().Name);
+            programmer.WriteCode();
 
-            Console.WriteLine(programmer.WriteCode());
+            var programmer2 = kernel.Get<JavaProgrammer>();
+            Console.WriteLine("\n" + programmer2.GetType().Name);
+            programmer2.WriteCode();
         }
     }
 
@@ -27,8 +31,11 @@ namespace NinjectDI
         public override void Load()
         {
             this.Bind<Programmer>().ToSelf();
-            this.Bind<ICaffeinated>().To<DietCoke>();
+            this.Bind<ICaffeinated>().To<DietCoke>().WhenInjectedInto<MicrosoftProgrammer>();
+            this.Bind<ICaffeinated>().To<PepsiMax>().WhenInjectedInto<JavaProgrammer>();
 
+            this.Bind<IEditor>().To<VisualStudio>().When(request => request.Target.Member.DeclaringType == typeof(MicrosoftProgrammer));
+            this.Bind<IEditor>().To<Eclipse>().WhenInjectedInto<JavaProgrammer>();
         }
     }
 }

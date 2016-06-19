@@ -1,4 +1,4 @@
-﻿namespace StaticManualDI
+﻿namespace NinjectDI
 {
     public interface IEditor
     {
