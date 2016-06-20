@@ -1,3 +1,3 @@
 # CodePractice
 
-Random coding work out.
+Random coding workout.
