@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticManualDI", "StaticManualDI\StaticManualDI.csproj", "{2F81D81A-D1E3-459C-885E-6547C0591597}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProviderT", "StaticManualDI\ManualProviderT.csproj", "{2F81D81A-D1E3-459C-885E-6547C0591597}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjectDI", "NinjectDI\NinjectDI.csproj", "{EF910783-E33A-4107-BD34-DC176ACDB362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoFactoryDI", "RepoFactoryDI\RepoFactoryDI.csproj", "{69D967DA-3EF6-40A0-881C-34D7CF31A220}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EF910783-E33A-4107-BD34-DC176ACDB362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF910783-E33A-4107-BD34-DC176ACDB362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF910783-E33A-4107-BD34-DC176ACDB362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D967DA-3EF6-40A0-881C-34D7CF31A220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D967DA-3EF6-40A0-881C-34D7CF31A220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D967DA-3EF6-40A0-881C-34D7CF31A220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D967DA-3EF6-40A0-881C-34D7CF31A220}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
