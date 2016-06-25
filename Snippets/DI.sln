@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProviderT", "StaticManualDI\ManualProviderT.csproj", "{2F81D81A-D1E3-459C-885E-6547C0591597}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProviderT", "ManualProviderT\ManualProviderT.csproj", "{2F81D81A-D1E3-459C-885E-6547C0591597}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjectDI", "NinjectDI\NinjectDI.csproj", "{EF910783-E33A-4107-BD34-DC176ACDB362}"
 EndProject
