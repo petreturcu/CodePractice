@@ -43,7 +43,7 @@
             app.UseStaticFiles();*/
 
             //app.UseMvcWithDefaultRoute();
-            app.UseMvc(ConfigureRoute);
+            app.UseMvc(this.ConfigureRoutes);
 
             app.Run(
                 async (context) =>
@@ -53,7 +53,7 @@
                     });
         }
 
-        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
         {
             routeBuilder.MapRoute("Default",
                 "{controller=Home}/{action=Index}/{id?}");
