@@ -8,11 +8,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
 {
-    public class HomeController
+    using WebApp.Models;
+
+    public class HomeController : Controller
     {
-        public string Index()
+        public ObjectResult Index()
         {
-            return $"Hello from the {this}";
+            var model = new Student {Id = 1, Name = "John Doe"};
+            return new ObjectResult(model);
         }
     }
 }
