@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Student>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+    <table>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

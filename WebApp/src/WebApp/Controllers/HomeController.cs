@@ -8,14 +8,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers
 {
+    using Services;
     using WebApp.Models;
 
     public class HomeController : Controller
     {
-        public ObjectResult Index()
+        private IStudentData _studentData;
+
+        public HomeController(IStudentData studentData)
         {
-            var model = new Student {Id = 1, Name = "John Doe"};
-            return new ObjectResult(model);
+            _studentData = studentData;
+        }
+
+        public ViewResult Index()
+        {
+            var model = _studentData.GetAll();
+            return View(model);
         }
     }
 }
