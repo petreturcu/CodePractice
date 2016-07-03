@@ -4,6 +4,7 @@
     using Microsoft.AspNetCore.Http;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Routing;
     using Microsoft.Extensions.Configuration;
     using Services;
 
@@ -30,7 +31,7 @@
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app,IHostingEnvironment environment, IGreeter greeter)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment environment, IGreeter greeter)
         {
             if(environment.IsDevelopment())
                 app.UseDeveloperExceptionPage();
@@ -41,7 +42,8 @@
 /*            app.UseDefaultFiles();
             app.UseStaticFiles();*/
 
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
+            app.UseMvc(ConfigureRoute);
 
             app.Run(
                 async (context) =>
@@ -49,6 +51,12 @@
                         var greeting = greeter.GetGreeting();
                         await context.Response.WriteAsync(greeting);
                     });
+        }
+
+        private void ConfigureRoute(IRouteBuilder routeBuilder)
+        {
+            routeBuilder.MapRoute("Default",
+                "{controller=Home}/{action=Index}/{id?}");
         }
     }
 }
