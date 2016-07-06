@@ -1,15 +1,16 @@
-﻿@model IEnumerable<Student>
+﻿@model WebApp.ViewModels.HomePageViewModel
 <html>
 <head>
     <title>Home</title>
 </head>
 <body>
 <h1>Welcome!</h1>
+    <h3>@Model.CurrentGreeting</h3>
     <table>
-        @foreach (var student in Model)
+        @foreach (var student in Model.Students)
         {
             <tr>
-                <td>@student.Id</td>
+                <td>@Html.ActionLink(student.Id.ToString(),"Details", new { id = student.Id})</td>
                 <td>@student.Name</td>
             </tr>
         }
