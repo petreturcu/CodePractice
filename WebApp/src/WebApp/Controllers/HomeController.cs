@@ -36,7 +36,7 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public ViewResult Create(StudentEditViewModel model)
+        public IActionResult Create(StudentEditViewModel model)
         {
             var student = new Student
             {
@@ -46,7 +46,7 @@ namespace WebApp.Controllers
 
             _studentData.Add(student);
 
-            return View("Details", student);
+            return RedirectToAction("Details", new { id = student.Id });
         }
 
 
