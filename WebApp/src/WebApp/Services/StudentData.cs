@@ -11,13 +11,15 @@ namespace WebApp.Services
     {
         IEnumerable<Student> GetAll();
         Student Get(int id);
+
+        void Add(Student newStudent);
     }
 
     public class InMemoryStudentData : IStudentData
     {
-        List<Student> _students;
+        static List<Student> _students;
 
-        public InMemoryStudentData()
+        static InMemoryStudentData()
         {
             _students = new List<Student>
             {
@@ -25,6 +27,12 @@ namespace WebApp.Services
                 new Student {Id = 2, Name = "Sonja" },
                 new Student {Id = 3, Name = "Alexandra" }
             };
+        }
+
+        public void Add(Student newStudent)
+        {
+            newStudent.Id = _students.Max(s => s.Id) + 1;
+            _students.Add(newStudent);
         }
 
         public Student Get(int id)

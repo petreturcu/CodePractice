@@ -29,6 +29,27 @@ namespace WebApp.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult Create(StudentEditViewModel model)
+        {
+            var student = new Student
+            {
+                Name = model.Name,
+                Personality = model.Personality
+            };
+
+            _studentData.Add(student);
+
+            return View("Details", student);
+        }
+
+
         public IActionResult Details(int id)
         {
             var model = _studentData.Get(id);

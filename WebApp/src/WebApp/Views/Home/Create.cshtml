@@ -1,0 +1,25 @@
+﻿@using WebApp.Entities
+@model Student
+<html>
+<head>
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create</h1>
+
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Personality)
+            @Html.DropDownListFor(m => m.Personality, Html.GetEnumSelectList(typeof(Personality)))
+        </div>
+        <div>
+            <input type="submit" value="Save"
+        </div>
+    }
+</body>
+</html>
