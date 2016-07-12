@@ -6,42 +6,41 @@
 
     public static class Providers
     {
-        private static readonly Dictionary<Type, object> providersDictionary = new Dictionary<Type, object>();
+        private static readonly Dictionary<Type, Type> providersDictionary = new Dictionary<Type, Type>();
+        private static readonly Dictionary<Type, object> singletonDictionary = new Dictionary<Type, object>();
 
-        public static T GetProvider<T>() where T : class
+        public static T GetTransient<T>() where T : class
         {
-            object provider;
-            if (providersDictionary.TryGetValue(typeof(T), out provider)) return (T)provider;
+            Type concreteType;
+            if (providersDictionary.TryGetValue(typeof(T), out concreteType)) return (T)Activator.CreateInstance(concreteType);
 
-            if (typeof(T) == typeof(IDataProvider))
-            {
-                RegisterProvider<IDataProvider>(new SqlServerDataProvider());
-                return GetProvider<T>();
-            }
-
-            if (typeof(T) == typeof(IEmailProvider))
-            {
-                RegisterProvider<IEmailProvider>(new SmptEmailProvider());
-                return GetProvider<T>();
-            }
-
-            if (typeof(T) == typeof(IUserProvider))
-            {
-                RegisterProvider<IUserProvider>(new SqlServerUserProvider());
-                return GetProvider<T>();
-            }
-
-            // add others here
-
-            return null;
+            throw new Exception($"No provider of type {typeof(T)} found.");
         }
 
-        public static void RegisterProvider<T>(T provider)
+        public static T GetSingleton<T>() where T : class
         {
-            if (providersDictionary.ContainsKey(typeof(T)))
-                providersDictionary[typeof(T)] = provider;
+            object concrete;
+            if (singletonDictionary.TryGetValue(typeof(T), out concrete))
+                return (T)concrete;
+
+            Type concreteType;
+            if (providersDictionary.TryGetValue(typeof(T), out concreteType))
+            {
+                singletonDictionary.Add(typeof(T), Activator.CreateInstance(concreteType));
+                return GetSingleton<T>();
+            }
+
+            throw new Exception($"No provider of type {typeof(T)} found.");
+        }
+
+        public static void RegisterProvider<TInterface, TConcrete>()
+            where TInterface : class
+            where TConcrete : TInterface
+        {
+            if (providersDictionary.ContainsKey(typeof(TInterface)))
+                providersDictionary[typeof(TInterface)] = typeof(TConcrete);
             else
-                providersDictionary.Add(typeof(T), provider);
+                providersDictionary.Add(typeof(TInterface), typeof(TConcrete));
         }
     }
 }

@@ -7,12 +7,23 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Providers.GetProvider<IDataProvider>().Description());
-            Console.WriteLine(Providers.GetProvider<IEmailProvider>().Description());
-            Console.WriteLine(Providers.GetProvider<IUserProvider>().Description());
+            //register concretes to interfaces
+            Providers.RegisterProvider<IEmailProvider, SmptEmailProvider>();
+            Providers.RegisterProvider<IDataProvider, SqlServerDataProvider>();
+            Providers.RegisterProvider<IUserProvider, SqlServerUserProvider>();
 
-            Providers.RegisterProvider<IEmailProvider>(new ImapEmailProvider());
-            Console.WriteLine(Providers.GetProvider<IEmailProvider>().Description());
+            // test
+            Console.WriteLine(Providers.GetTransient<IDataProvider>().Description());
+            Console.WriteLine(Providers.GetTransient<IEmailProvider>().Description());
+            Console.WriteLine(Providers.GetTransient<IUserProvider>().Description());
+
+            Providers.RegisterProvider<IEmailProvider, ImapEmailProvider>();
+            Console.WriteLine(Providers.GetTransient<IEmailProvider>().Description());
+
+            // check singletons and transients are different
+            Console.WriteLine(Providers.GetTransient<IEmailProvider>().Equals(Providers.GetTransient<IEmailProvider>()));
+            Console.WriteLine(Providers.GetSingleton<IEmailProvider>().Equals(Providers.GetTransient<IEmailProvider>()));
+            Console.WriteLine(Providers.GetSingleton<IEmailProvider>().Equals(Providers.GetSingleton<IEmailProvider>()));
         }
     }
 }
