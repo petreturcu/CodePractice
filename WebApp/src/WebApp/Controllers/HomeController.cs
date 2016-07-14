@@ -38,15 +38,20 @@ namespace WebApp.Controllers
         [HttpPost]
         public IActionResult Create(StudentEditViewModel model)
         {
-            var student = new Student
+            if (ModelState.IsValid)
             {
-                Name = model.Name,
-                Personality = model.Personality
-            };
+                var student = new Student
+                {
+                    Name = model.Name,
+                    Hobby = model.Hobby
+                };
 
-            _studentData.Add(student);
+                _studentData.Add(student);
 
-            return RedirectToAction("Details", new { id = student.Id });
+                return RedirectToAction("Details", new { id = student.Id });
+            }
+
+            return View();
         }
 
 

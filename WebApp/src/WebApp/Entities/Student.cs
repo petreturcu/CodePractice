@@ -1,23 +1,23 @@
-﻿namespace WebApp.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApp.Entities
 {
-    public enum Personality
+    public enum Hobby
     {
-        Introversion,
-        Extroversion,
-        Sensing,
-        Intuition,
-        Thinking,
-        Feeling,
-        Judging,
-        Perceiving
+        Football,
+        Photography,
+        Gym,
+        Reading
     }
 
     public class Student
     {
         public int Id { get; set; }
 
+        [Required, MaxLength(100)]
+        [Display(Name="Student Name")]
         public string Name { get; set; }
 
-        public Personality Personality { get; set; }
+        public Hobby Hobby { get; set; }
     }
 }
