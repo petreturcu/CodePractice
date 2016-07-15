@@ -1,7 +1,6 @@
 ﻿namespace NinjectDI
 {
     using System;
-    using System.Diagnostics.Eventing;
 
     public abstract class Programmer
     {
@@ -30,7 +29,7 @@
 
     public class MicrosoftProgrammer : Programmer
     {
-        public MicrosoftProgrammer(ICaffeinated drink, IEditor editor): base(drink, editor)
+        public MicrosoftProgrammer(ICaffeinated drink, IEditor editor) : base(drink, editor)
         {
         }
     }
