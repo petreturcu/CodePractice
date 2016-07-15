@@ -1,8 +1,8 @@
 ﻿namespace StaticManualDI
 {
+    using Interfaces;
     using System;
     using System.Collections.Generic;
-    using Interfaces;
 
     public static class Providers
     {

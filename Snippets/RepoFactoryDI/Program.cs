@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // derived from sample of http://jeffreypalermo.com/blog/the-onion-architecture-part-1/
 namespace RepoFactoryDI

@@ -1,7 +1,7 @@
 ﻿namespace StaticManualDI
 {
-    using System;
     using Interfaces;
+    using System;
 
     class Program
     {
