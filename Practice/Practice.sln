@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConfiguration", "Config\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProviderTests", "ManualProviderTests\ManualProviderTests.csproj", "{19F9742D-C103-4FB8-809D-B9983685E415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetPractice", "DotNetPractice\DotNetPractice.csproj", "{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{19F9742D-C103-4FB8-809D-B9983685E415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F9742D-C103-4FB8-809D-B9983685E415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F9742D-C103-4FB8-809D-B9983685E415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
