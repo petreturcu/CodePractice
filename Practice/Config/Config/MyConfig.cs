@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file = "MyConfig.cs" author = "Petre Turcu" company = "LadApps">
+// <copyright file = "MyConfig.cs" author = "Petre Turcu">
 //      Copyright (c) 10/04/2016
 // </copyright>
 // -----------------------------------------------------------------------

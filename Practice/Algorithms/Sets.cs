@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file = "Sets.cs" author = "Petre Turcu" company = "LadApps">
+// <copyright file = "Sets.cs" author = "Petre Turcu">
 //      Copyright (c) 16/06/2016
 // </copyright>
 // -----------------------------------------------------------------------

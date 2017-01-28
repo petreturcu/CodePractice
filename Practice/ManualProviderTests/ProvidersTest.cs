@@ -1,11 +1,6 @@
 ﻿namespace ManualProviderTests
 {
-    using System;
-    using System.Reflection;
-
     using FluentAssertions;
-
-    using Mono.CompilerServices.SymbolWriter;
 
     using NUnit.Framework;
 

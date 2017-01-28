@@ -6,8 +6,8 @@
     <ProjectGuid>{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DotNetPractice</RootNamespace>
-    <AssemblyName>DotNetPractice</AssemblyName>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -72,11 +72,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Practice.cs" />
+    <Compile Include="AlgorithmsTests\TeamSchedulingTests.cs" />
+    <Compile Include="StringInterning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms\Algorithms.csproj">
+      <Project>{807FB40C-FE67-4100-BDA0-28D78984B478}</Project>
+      <Name>Algorithms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

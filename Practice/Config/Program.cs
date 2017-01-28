@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file = "Program.cs" author = "Petre Turcu" company = "LadApps">
+// <copyright file = "Program.cs" author = "Petre Turcu">
 //      Copyright (c) 10/04/2016
 // </copyright>
 // -----------------------------------------------------------------------
