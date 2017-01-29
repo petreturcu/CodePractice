@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="AlgorithmsTests\StringsTests.cs" />
     <Compile Include="AlgorithmsTests\TeamSchedulingTests.cs" />
+    <Compile Include="ExceptionCatching.cs" />
     <Compile Include="StringInterning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
