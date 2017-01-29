@@ -12,10 +12,10 @@ namespace NinjectDI
         {
             IKernel kernel = NinjectFactory.GetNinjectKernel();
 
-            var drink = kernel.Get<ICaffeinated>();
+            ICaffeinated drink = kernel.Get<ICaffeinated>();
             drink.Drink();
 
-            var mre = new ManualResetEvent(false);
+            ManualResetEvent mre = new ManualResetEvent(false);
             ThreadPool.QueueUserWorkItem(DrinkCaffeine, mre);
             mre.WaitOne();
 
@@ -43,7 +43,7 @@ namespace NinjectDI
         {
             IKernel kernel = NinjectFactory.GetNinjectKernel();
 
-            var drink = kernel.Get<ICaffeinated>();
+            ICaffeinated drink = kernel.Get<ICaffeinated>();
             drink.Drink();
 
             Console.WriteLine(drink.DrinkCount);

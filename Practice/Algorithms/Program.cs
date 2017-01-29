@@ -7,7 +7,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            var matches = TeamScheduling.GetMatchesFor(new List<Team> { new Team(1), new Team(2), new Team(3), new Team(4), new Team(5), new Team(6), new Team(7) });
+            IEnumerable<Match> matches = TeamScheduling.GetMatchesFor(new List<Team> { new Team(1), new Team(2), new Team(3), new Team(4), new Team(5), new Team(6), new Team(7) });
             foreach (Match match in matches)
             {
                 Console.WriteLine($"{match.Team1.Id} - {match.Team2.Id} - {match.Date.ToShortDateString()}");

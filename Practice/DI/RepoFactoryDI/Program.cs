@@ -13,8 +13,8 @@ namespace RepoFactoryDI
 
 
             // somewhere in middle/core project
-            var myUserRepo = UserRepositoryFactory.GetUserRepository();
-            var myMealRepo = MealRepositoryFactory.GetMealRepository();
+            IUserRepository myUserRepo = UserRepositoryFactory.GetUserRepository();
+            IMealRepository myMealRepo = MealRepositoryFactory.GetMealRepository();
 
             Console.WriteLine("Whats my email?\n" + myUserRepo.GetUserEmail(12345) + "\n");
             Console.WriteLine("I'd like something to drink.\n" + myMealRepo.GetMeal(12345));

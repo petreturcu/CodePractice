@@ -17,9 +17,9 @@
 
 
             // Act
-            var concreteEmail = Providers.GetProvider<IEmailProvider>();
-            var concreteData = Providers.GetProvider<IDataProvider>();
-            var concreteUser = Providers.GetProvider<IUserProvider>();
+            IEmailProvider concreteEmail = Providers.GetProvider<IEmailProvider>();
+            IDataProvider concreteData = Providers.GetProvider<IDataProvider>();
+            IUserProvider concreteUser = Providers.GetProvider<IUserProvider>();
 
             // Assert
             concreteEmail.Should().BeOfType<SmptEmailProvider>();
