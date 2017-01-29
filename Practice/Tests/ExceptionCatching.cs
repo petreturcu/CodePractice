@@ -24,8 +24,8 @@
             catch (Exception e)
             {
                 // Assert
-                e.StackTrace.Should().NotContain(":line 90");
-                e.StackTrace.Should().Contain(":line 95");
+                e.StackTrace.Should().NotContain(":line 92");
+                e.StackTrace.Should().Contain(":line 99");
             }
         }
 
@@ -43,8 +43,8 @@
             catch (Exception e)
             {
                 // Assert
-                e.StackTrace.Should().Contain(":line 104");
-                e.StackTrace.Should().Contain(":line 108");
+                e.StackTrace.Should().Contain(":line 110");
+                e.StackTrace.Should().Contain(":line 116");
             }
         }
 
@@ -86,8 +86,12 @@
         {
             try
             {
+                // hundreds of lines here
+
                 // this line is NOT shown in the stack trace
                 throw new NullReferenceException();
+
+                // hundreds of lines here
             }
             catch (Exception)
             {
@@ -100,8 +104,12 @@
         {
             try
             {
+                // hundreds of lines here
+
                 // with ExceptionDispatchInfo this line is now shown in the stack trace
                 throw new NullReferenceException();
+
+                // hundreds of lines here
             }
             catch (Exception e)
             {
