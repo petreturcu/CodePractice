@@ -17,9 +17,9 @@ namespace Algorithms
             Sets.PermuteSimple("1234");
 
             Console.WriteLine("Compare abcd with abcd:");
-            Console.WriteLine(Strings.CompareNoLib("abcd", "abcd"));
+            Console.WriteLine(Strings.EqualsNoLib("abcd", "abcd"));
             Console.WriteLine("Compare abcd with abcd:");
-            Console.WriteLine(Strings.CompareNoLib("abc", "abcd"));
+            Console.WriteLine(Strings.EqualsNoLib("abc", "abcd"));
         }
     }
 }

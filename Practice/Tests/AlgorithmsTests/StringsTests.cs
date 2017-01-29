@@ -19,13 +19,13 @@
         [TestCase("string", "string")]
         [TestCase("string2", "strrrr")]
         [TestCase("string2", "string1")]
-        public void CompareNoLib_ShouldCorrectlyCompareStrings(string str1, string str2)
+        public void EqualsNoLib_ShouldCorrectlyCompareStringsForEquality(string str1, string str2)
         {
             // Arrange
 
 
             // Act
-            var result = Strings.CompareNoLib(str1, str2);
+            var result = Strings.EqualsNoLib(str1, str2);
 
             // Assert
             result.Should().Be(str1 == str2);

@@ -17,7 +17,7 @@ namespace Algorithms
         /// <param name="str1">The STR1.</param>
         /// <param name="str2">The STR2.</param>
         /// <returns></returns>
-        public static bool CompareNoLib(string str1, string str2)
+        public static bool EqualsNoLib(string str1, string str2)
         {
             if (str1 == null && str2 == null) return true;
             if (str1 == null || str2 == null) return false;
