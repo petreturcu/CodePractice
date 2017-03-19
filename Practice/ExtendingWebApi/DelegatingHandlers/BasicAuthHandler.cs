@@ -8,11 +8,11 @@
 
     public class BasicAuthHandler : DelegatingHandler
     {
-        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            if (!HasBasicAuth(request)) return Task.FromResult(request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Missing Auth."));
+            if (!HasBasicAuth(request)) return request.CreateErrorResponse(HttpStatusCode.Unauthorized, "Missing Auth.");
 
-            return base.SendAsync(request, cancellationToken);
+            return await base.SendAsync(request, cancellationToken);
         }
 
         private static bool HasBasicAuth(HttpRequestMessage request)
