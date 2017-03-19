@@ -1,4 +1,4 @@
 language: csharp
 solution: Practice/Practice.sln
 script: 
-- xbuild /p:Configuration=Release Practice/Practice.sln /p:TargetFrameworkVersion="v4.0"
+- xbuild /p:Configuration=Release Practice/Practice.sln /p:TargetFrameworkVersion="v4.5"
