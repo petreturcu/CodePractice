@@ -107,6 +107,7 @@
     <Compile Include="App_Start\DelegatingHandlersConfig.cs" />
     <Compile Include="DelegatingHandlers\BasicAuthHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="StartUp.cs" />
   </ItemGroup>
   <PropertyGroup>
