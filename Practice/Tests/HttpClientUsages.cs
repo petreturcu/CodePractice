@@ -13,7 +13,7 @@
     public class HttpClientUsageTests
     {
         [Test]
-        public async Task AnyOperation_WhenPutInAUsing_IsConsiderablySlowerThanReusing()
+        public async Task GetStringAsync_WhenPutInAUsing_IsConsiderablySlowerThanReusing()
         {
             // Arrange
             double timeWithUsing, timeWithReusable;
