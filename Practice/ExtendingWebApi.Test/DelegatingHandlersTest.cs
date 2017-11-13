@@ -11,6 +11,7 @@
     using NUnit.Framework;
 
     [TestFixture]
+    [Explicit("Need localhost running")]
     public class DelegatingHandlersTest : IntegrationTestBase
     {
         [Test]
