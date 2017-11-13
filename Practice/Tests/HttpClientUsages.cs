@@ -1,6 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Samples.Tests.Core
+﻿namespace Samples.Tests
 {
     using System;
     using System.Diagnostics;
@@ -8,6 +6,8 @@ namespace Samples.Tests.Core
     using System.Threading.Tasks;
 
     using NUnit.Framework;
+
+    using Assert = NUnit.Framework.Assert;
 
     [TestFixture]
     public class HttpClientUsageTests

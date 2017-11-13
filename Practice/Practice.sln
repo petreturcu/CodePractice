@@ -25,8 +25,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingWebApi", "Extendin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingWebApi.Test", "ExtendingWebApi.Test\ExtendingWebApi.Test.csproj", "{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tests.Core", "Samples.Tests.Core\Samples.Tests.Core.csproj", "{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,10 +67,6 @@ Global
 		{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
