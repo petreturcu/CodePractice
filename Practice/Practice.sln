@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Algorithms.csproj", "{807FB40C-FE67-4100-BDA0-28D78984B478}"
 EndProject
@@ -19,11 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConfiguration", "Config\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProviderTests", "ManualProviderTests\ManualProviderTests.csproj", "{19F9742D-C103-4FB8-809D-B9983685E415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tests", "Tests\Samples.Tests.csproj", "{AE47C1DE-5CE2-4411-8C17-4EA362E16E1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingWebApi", "ExtendingWebApi\ExtendingWebApi.csproj", "{DFD3779C-3CE5-4FDF-83B0-18DE2DAE9690}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingWebApi.Test", "ExtendingWebApi.Test\ExtendingWebApi.Test.csproj", "{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Samples.Tests.Core", "Samples.Tests.Core\Samples.Tests.Core.csproj", "{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB94BAB-F3BD-42DF-A570-2951F45E41F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D8BA62C-B350-48BF-8D59-1CF4F55CB9E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +83,8 @@ Global
 		{2F81D81A-D1E3-459C-885E-6547C0591597} = {A6837DD0-4796-42AA-AFC4-2E3E3B4BC15B}
 		{8E8392CA-88B0-46A5-8F0A-49CFA120A592} = {2BE41AC9-F5A3-46C7-BEA9-BE68A524AF1D}
 		{19F9742D-C103-4FB8-809D-B9983685E415} = {A6837DD0-4796-42AA-AFC4-2E3E3B4BC15B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89D6E49E-AFAD-4C9F-8AD8-DD26048180B4}
 	EndGlobalSection
 EndGlobal

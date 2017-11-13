@@ -17,6 +17,7 @@ namespace ExtendingWebApi
             var config = new HttpConfiguration();
             DelegatingHandlersConfig.Register(config);
             RouteConfig.Register(config);
+            SwaggerConfig.Register(config);
             app.UseWebApi(config);
         }
     }

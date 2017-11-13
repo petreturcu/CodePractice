@@ -8,7 +8,7 @@
     {
         public static void Register(HttpConfiguration config)
         {
-            config.MessageHandlers.Add(new BasicAuthHandler());
+            //config.MessageHandlers.Add(new BasicAuthHandler());
         }
     }
 }

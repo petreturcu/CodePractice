@@ -6,7 +6,11 @@
     {
         public static void Register(HttpConfiguration config)
         {
-            config.MapHttpAttributeRoutes();
+            config.Routes.MapHttpRoute(
+                name: "API Default",
+                routeTemplate: "api/{controller}/{action}",
+                defaults: new { controller = "alive", action = "get" }
+            );
         }
     }
 }
