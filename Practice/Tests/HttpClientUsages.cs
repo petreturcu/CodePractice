@@ -46,7 +46,7 @@
             timeWithReusable = sw.Elapsed.TotalSeconds;
 
             // Assert
-            Assert.Greater(timeWithUsing, timeWithReusable * 2);
+            Assert.Greater(timeWithUsing, timeWithReusable * 1.5);
         }
 
     }
